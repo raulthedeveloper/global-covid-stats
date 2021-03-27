@@ -4,8 +4,8 @@ body{
   background-color: #000000bf;
 }
 
-.app{
-  width: 95%;
+.App{
+  margin: 2rem;
   
 }
 
@@ -16,7 +16,6 @@ h1, h2, h3, p{
 
 
 .widget{
-  margin: .5rem;
   padding: 1rem;
   background-color: black;
   border-radius: 10px;
@@ -27,8 +26,8 @@ h1, h2, h3, p{
   display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr repeat(2, 4fr) 5fr;
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
   }
   
   .div1 { grid-area: 1 / 1 / 2 / 2; }

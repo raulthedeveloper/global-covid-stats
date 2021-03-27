@@ -1,5 +1,12 @@
 import './scss/App.scss';
 import SingleValue from './components/SingleValue'
+import ComparePop from './components/ComparePop'
+import CountrySearch from './components/CountrySearch'
+import Calendar from './components/Calendar'
+import HistoryTotals from './components/HistoryTotals'
+import axios from 'axios'
+
+
 
 function App() {
   return (
@@ -27,13 +34,13 @@ function App() {
 
 
 <div class="div5 widget">
-<h2>Historical Totals</h2>
+<HistoryTotals />
 
    </div>
 
 
 <div class="div6 widget"> 
-<h2>Compare Population</h2>
+<ComparePop />
 </div>
 
 <div class="div7 widget">
@@ -42,10 +49,12 @@ function App() {
 
 <div class="div8 widget"> 
 <h2>Country Search</h2>
+<CountrySearch/>
 </div>
 
 <div class="div9 widget"> 
-<h2>Calendar</h2>
+
+<Calendar />
 </div>
 </div>
     </div>

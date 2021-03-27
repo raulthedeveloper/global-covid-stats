@@ -1,8 +1,7 @@
 import React from 'react'
-import { Bar } from 'react-chartjs-2';
+import { statistics } from '../api/Statistics'
 
-
-export default function BarGraph() {
+export default function CountrySearch() {
     return (
         <div>
             
