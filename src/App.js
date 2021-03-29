@@ -1,10 +1,10 @@
 import './scss/App.scss';
 import SingleValue from './components/SingleValue'
 import ComparePop from './components/ComparePop'
-import CountrySearch from './components/CountrySearch'
+import CountrySearch from './components/CountrySearch/index'
 import Calendar from './components/Calendar'
 import HistoryTotals from './components/HistoryTotals'
-import axios from 'axios'
+import MonthsCompare from './components/MonthsCompare'
 
 
 
@@ -12,47 +12,47 @@ function App() {
   return (
     <div className="App">
 
-<div class="parent">
-<div class="div1 widget"> 
+<div className="parent">
+<div className="div1 widget"> 
 <SingleValue title="New" classStyle="circle red" data="5555"/>
 </div>
 
-<div class="div2 widget"> 
+<div className="div2 widget"> 
 <SingleValue title="Active" classStyle="circle blue" data="5555"/>
 </div>
 
 
-<div class="div3 widget">
+<div className="div3 widget">
 <SingleValue title="Critical" classStyle="circle green" data="5555"/>
    </div>
 
 
-<div class="div4 widget"> 
+<div className="div4 widget"> 
 <SingleValue title="Recovered" classStyle="circle purple" data="5555"/>
 
 </div>
 
 
-<div class="div5 widget">
+<div className="div5 widget">
 <HistoryTotals />
 
    </div>
 
 
-<div class="div6 widget"> 
+<div className="div6 widget"> 
 <ComparePop />
 </div>
 
-<div class="div7 widget">
-<h2>Bar Graph</h2>
+<div className="div7 widget">
+<MonthsCompare />
    </div>
 
-<div class="div8 widget"> 
-<h2>Country Search</h2>
+<div className="div8 widget"> 
+
 <CountrySearch/>
 </div>
 
-<div class="div9 widget"> 
+<div className="div9 widget"> 
 
 <Calendar />
 </div>

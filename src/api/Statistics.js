@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-function statistics(){
+export function statistics(){
     const options = {
         method: 'GET',
         url: 'https://covid-193.p.rapidapi.com/statistics',
@@ -9,12 +9,15 @@ function statistics(){
           'x-rapidapi-host': 'covid-193.p.rapidapi.com'
         }
       };
-      
-      axios.request(options).then(function (response) {
-          console.log(response.data);
+     
+     axios.request(options).then(function (response) {
+       return response.data;
       }).catch(function (error) {
           console.error(error);
       });
+
+    
 }
 
-export default statistics
+
+

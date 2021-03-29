@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 body{
-  background-color: #000000bf;
+  background-color: $background-color;
 }
 
 .App{
@@ -17,17 +17,20 @@ h1, h2, h3, p{
 
 .widget{
   padding: 1rem;
-  background-color: black;
-  border-radius: 10px;
+  background-color: $widget-color;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 5px 16px 7px rgba(0,0,0,0.41); 
+box-shadow: 1px 5px 16px 7px rgba(0,0,0,0.41);
 }
+
 
 
 .parent {
   display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr repeat(2, 4fr) 5fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-template-rows: 1fr  4fr;
+    grid-column-gap: $grid-gap;
+    grid-row-gap: $grid-gap;
   }
   
   .div1 { grid-area: 1 / 1 / 2 / 2; }
@@ -45,7 +48,7 @@ h1, h2, h3, p{
   border-radius: 10px;
   width: $circle-size;
   height: $circle-size;
-  
+  margin-top: 4px;
 }
 
 .blue{
