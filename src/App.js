@@ -5,10 +5,45 @@ import CountrySearch from './components/CountrySearch/index'
 import Calendar from './components/Calendar'
 import HistoryTotals from './components/HistoryTotals'
 import MonthsCompare from './components/MonthsCompare'
+import axios from 'axios';
+import { useEffect, useState } from 'react'
 
 
 
-function App() {
+
+
+
+   
+ 
+
+
+ function App() {
+const [allCountries, setallCountries] = useState(Array)
+
+
+ 
+
+   useEffect(() => {
+      const options = {
+         method: 'GET',
+         url: 'https://covid-193.p.rapidapi.com/statistics',
+         headers: {
+           'x-rapidapi-key': '52b459a4e2msh8fddfaf671beb59p14b298jsn42318c134a1e',
+           'x-rapidapi-host': 'covid-193.p.rapidapi.com'
+         }
+       };
+       
+       axios.request(options).then(function (response) {
+       setallCountries(response.data.response);
+       })
+       .catch(function (error) {
+           console.error(error);
+       });
+    
+   },[])
+
+
+   
   return (
     <div className="App">
 
@@ -49,7 +84,7 @@ function App() {
 
 <div className="div8 widget"> 
 
-<CountrySearch/>
+<CountrySearch data={allCountries}/>
 </div>
 
 <div className="div9 widget"> 

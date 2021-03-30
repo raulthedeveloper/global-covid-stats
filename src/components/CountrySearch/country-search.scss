@@ -4,8 +4,13 @@
     margin-bottom: 1rem;
 }
 
+.search-button{
+    background-color: blueviolet;
+}
+
 .list-container{
     overflow: scroll;
+    max-height: 300px;
 }
 
 .list-data{

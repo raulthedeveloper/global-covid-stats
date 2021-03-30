@@ -1,81 +1,41 @@
-import React from 'react'
-import { statistics } from '../../api/Statistics'
+import React, {useState} from 'react'
 import './country-search.scss';
 
-console.log(statistics())
 
-export default function CountrySearch() {
+  
+
+
+
+
+
+
+
+export default function CountrySearch({data}) {
+
+     
     return (
+        
         <div>
+           
             <h2>Country Search</h2>
             <input className="search-input" type="text" />
-            <button>Search</button>
+            <button className="search-button">search</button>
             <div className="list-container">
-            <div className="list-object">
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            </div>
+          {
+              data.map((element,index) => {
+                 return <div className="list-object">
+                   <span className="list-data">{index + 1}</span>  
+                 <span className="list-data">{element.country}</span>
+                
+                 </div>
+              })
+          }
+
             
-            <div className="list-object">
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            </div>
+            
+           
 
-            <div className="list-object">
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            </div>
-
-            <div className="list-object">
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            </div>
-
-            <div className="list-object">
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            </div>
-
-            <div className="list-object">
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            </div>
-
-            <div className="list-object">
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            </div>
-
-            <div className="list-object">
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            </div>
-
-            <div className="list-object">
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            <span className="list-data">Morroco</span>
-            </div>
-
-        
-
+    
 
 
             </div>
